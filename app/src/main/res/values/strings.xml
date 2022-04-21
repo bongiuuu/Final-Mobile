@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">TodoApp</string>
+    <string name="log_in">Log In</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="password">Password</string>
+    <string name="proceed"><![CDATA[Proceed >]]></string>
+    <string name="or_log_in_with">Or Log In With</string>
+    <string name="newbie">Newbie?</string>
+    <string name="create_account">Create Account</string>
+    <string name="welcome">Welcome!</string>
+    <string name="have_an_account">Have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="email">Email</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="otp_message">Enter the email and we will send a One Time Password on this email</string>
+    <string name="reset_password">Reset password</string>
+    <string name="send_instructions">Send Instructions</string>
+    <string name="create_new_password">Create new password</string>
+    <string name="reset_message">Your new password must be different from previous used passwords.</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_the_otp_sent_to">Enter the OTP sent to</string>
+    <string name="ex_email">email@gmail.com</string>
+    <string name="submit">Submit</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="did_not_receive_the_otp">Did not receive the OTP?</string>
+    <string name="resend">Resend</string>
+</resources>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OtpVerificationActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_start"
+        android:layout_marginTop="50dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#e0e0e0"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/back_icon"
+            android:layout_gravity="center"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/ivPicForgotPassword"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/pic_forgotpassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvBack" />
+
+    <TextView
+        android:id="@+id/tvOtpVerification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ivPicForgotPassword"
+        android:layout_marginTop="20dp"
+        android:text="@string/otp_verification"
+        android:layout_marginStart="@dimen/margin_start"
+        android:textStyle="bold"
+        android:textSize="@dimen/big_text_size"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvOtpMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOtpVerification"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="@dimen/margin_start"
+        android:layout_marginEnd="@dimen/margin_start"
+        android:text="@string/enter_the_otp_sent_to"
+        android:textSize="15sp"
+        android:textColor="@android:color/darker_gray"
+        android:lineSpacingExtra="7dp"/>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tvOtpMessage"
+        app:layout_constraintTop_toBottomOf="@+id/tvOtpVerification"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="@dimen/margin_start"
+        android:text="@string/ex_email"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:lineSpacingExtra="7dp"/>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/fbOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start"
+        android:layout_marginEnd="@dimen/margin_start"
+        app:layout_constraintTop_toBottomOf="@+id/tvOtpMessage"
+        app:justifyContent="space_between">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLetter1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/otp_letter_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:boxStrokeColor="@color/light_purple_blue"
+            app:hintTextColor="@color/light_purple_blue"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtLetter1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLetter2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/otp_letter_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:boxStrokeColor="@color/light_purple_blue"
+            app:hintTextColor="@color/light_purple_blue"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtLetter2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLetter3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/otp_letter_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:boxStrokeColor="@color/light_purple_blue"
+            app:hintTextColor="@color/light_purple_blue"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtLetter3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLetter4"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/otp_letter_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:boxStrokeColor="@color/light_purple_blue"
+            app:hintTextColor="@color/light_purple_blue"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtLetter4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toBottomOf="@+id/fbOtp"
+        android:layout_marginStart="@dimen/margin_start"
+        android:layout_marginEnd="@dimen/margin_start"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/light_purple_blue"
+        app:cornerRadius="10dp"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textSize="@dimen/medium_text_size"/>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/margin_start"
+        android:layout_marginTop="15dp"
+        app:justifyContent="space_between">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/did_not_receive_the_otp"
+            android:textSize="@dimen/medium_text_size"/>
+
+        <TextView
+            android:id="@+id/tvCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend"
+            android:textSize="@dimen/medium_text_size"
+            android:textColor="@color/purple_blue"
+            android:textStyle="bold"/>
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
