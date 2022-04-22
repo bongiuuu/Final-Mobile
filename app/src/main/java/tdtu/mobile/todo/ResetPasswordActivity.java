@@ -3,6 +3,7 @@ package tdtu.mobile.todo;
 
 import android.view.View;
 
+import tdtu.mobile.todo.Base.BaseActivity;
 import tdtu.mobile.todo.databinding.ActivityResetPasswordBinding;
 
 public class ResetPasswordActivity extends BaseActivity {

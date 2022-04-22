@@ -3,6 +3,7 @@ package tdtu.mobile.todo;
 import android.content.Intent;
 import android.view.View;
 
+import tdtu.mobile.todo.Base.BaseActivity;
 import tdtu.mobile.todo.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends BaseActivity {
@@ -19,6 +20,11 @@ public class LoginActivity extends BaseActivity {
         binding.tvForgotPassword.setOnClickListener(v -> {
             Intent forgotPasswordIntent = new Intent(this, ForgotPasswordActivity.class);
             startActivity(forgotPasswordIntent);
+        });
+
+        binding.btnProceed.setOnClickListener(v -> {
+            Intent homeIntent = new Intent(this, MainActivity.class);
+            startActivity(homeIntent);
         });
     }
 

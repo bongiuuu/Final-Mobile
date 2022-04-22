@@ -10,4 +10,8 @@
     <color name="purple_blue">#3e24a6</color>
     <color name="dark_blue">#170b45</color>
     <color name="light_purple_blue">#5e67ec</color>
+    <color name="dark_blue_2">#153a76</color>
+    <color name="blue">#60acef</color>
+    <color name="light_blue">#a8d4f6</color>
+    <color name="orange">#ee6d3e</color>
 </resources>

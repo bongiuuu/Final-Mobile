@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TodoApp">
         <activity
+            android:name=".CreateTaskContinueActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateTaskActivity"
+            android:exported="false" />
+        <activity
             android:name=".OtpVerificationActivity"
             android:exported="false" />
         <activity

@@ -1,14 +1,28 @@
 package tdtu.mobile.todo;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.view.View;
 
-import android.os.Bundle;
+import tdtu.mobile.todo.Base.BaseActivity;
+import tdtu.mobile.todo.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
+
+    ActivityMainBinding binding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected void doBusiness() {
+        binding.bottomNavigationView.setBackground(null);
+
+        binding.btnCreateTask.setOnClickListener(v -> {
+            Intent createTaskIntent = new Intent(this, CreateTaskActivity.class);
+            startActivity(createTaskIntent);
+        });
+    }
+
+    @Override
+    protected View layoutId() {
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        return binding.getRoot();
     }
 }

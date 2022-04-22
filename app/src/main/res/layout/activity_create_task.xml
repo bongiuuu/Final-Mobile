@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".CreateTaskActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/margin_start_2"
+                    android:layout_marginTop="@dimen/margin_start"
+                    app:tint="@color/light_purple_blue"
+                    android:src="@drawable/ic_back"/>
+
+                <TextView
+                    android:id="@+id/tvCreateTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/margin_start"
+                    android:text="@string/create_a_task"
+                    android:gravity="center"
+                    android:textSize="@dimen/big_text_size"
+                    android:textColor="@color/dark_blue_2"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTitle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_start_2"
+                android:layout_marginStart="@dimen/margin_start_2"
+                android:layout_marginEnd="@dimen/margin_start_2"
+                app:layout_constraintTop_toBottomOf="@+id/tvCreateTask"
+                app:boxStrokeColor="@color/light_purple_blue"
+                app:hintTextColor="@color/light_purple_blue"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                android:hint="@string/add_task_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDescription"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/margin_start_2"
+                android:layout_marginEnd="@dimen/margin_start_2"
+                app:layout_constraintTop_toBottomOf="@+id/tilTitle"
+                app:boxStrokeColor="@color/light_purple_blue"
+                app:hintTextColor="@color/light_purple_blue"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                android:hint="@string/describe_your_task">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tilDescription"
+                android:layout_marginTop="@dimen/margin_start"
+                android:layout_marginStart="@dimen/margin_start"
+                android:text="@string/category"
+                android:textSize="@dimen/medium_text_size"
+                android:textColor="@color/dark_blue_2"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/fbCate1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="@dimen/margin_start_2"
+                android:layout_marginEnd="@dimen/margin_start_2"
+                app:justifyContent="space_around"
+                app:layout_constraintTop_toBottomOf="@+id/tvCategory">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCateWork"
+                    android:layout_width="180dp"
+                    android:layout_height="@dimen/category_height"
+                    app:cornerRadius="50dp"
+                    app:strokeColor="@color/blue"
+                    app:strokeWidth="1dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/work"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textColor="@color/dark_blue_2"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCateHome"
+                    android:layout_width="180dp"
+                    android:layout_height="@dimen/category_height"
+                    app:cornerRadius="50dp"
+                    app:strokeColor="@color/blue"
+                    app:strokeWidth="1dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/home"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textColor="@color/dark_blue_2"/>
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/fbCate2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="@dimen/margin_start_2"
+                android:layout_marginEnd="@dimen/margin_start_2"
+                app:justifyContent="space_around"
+                app:layout_constraintTop_toBottomOf="@+id/fbCate1">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCateActivities"
+                    android:layout_width="180dp"
+                    android:layout_height="@dimen/category_height"
+                    app:cornerRadius="50dp"
+                    app:strokeColor="@color/blue"
+                    app:strokeWidth="1dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/activities"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textColor="@color/dark_blue_2"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCateHabits"
+                    android:layout_width="180dp"
+                    android:layout_height="@dimen/category_height"
+                    app:cornerRadius="50dp"
+                    app:strokeColor="@color/blue"
+                    app:strokeWidth="1dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/habits"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textColor="@color/dark_blue_2"/>
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <TextView
+                android:id="@+id/tvAddNewCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/fbCate2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/margin_start"
+                android:text="@string/add_new_category"
+                android:textSize="@dimen/medium_text_size"
+                android:textColor="@color/light_purple_blue"/>
+
+            <TextView
+                android:id="@+id/tvSetPriority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvAddNewCategory"
+                android:layout_marginTop="@dimen/margin_start"
+                android:layout_marginStart="@dimen/margin_start"
+                android:text="@string/set_priority"
+                android:textSize="@dimen/medium_text_size"
+                android:textColor="@color/dark_blue_2"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/fbPriority"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                app:justifyContent="space_around"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_start_2"
+                app:layout_constraintTop_toBottomOf="@+id/tvSetPriority">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvAlert1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/priority_height"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="35dp"
+                    app:cardElevation="10dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/alert1" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvAlert2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/priority_height"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="35dp"
+                    app:cardElevation="10dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/alert2" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvAlert3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/priority_height"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="35dp"
+                    app:cardElevation="10dp">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/alert3" />
+
+                </androidx.cardview.widget.CardView>
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNextStep"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginStart="@dimen/margin_start_2"
+                android:layout_marginEnd="@dimen/margin_start_2"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="@dimen/margin_start"
+                android:backgroundTint="@color/light_purple_blue"
+                app:cornerRadius="30dp"
+                android:textAllCaps="false"
+                android:text="@string/next_step"
+                android:textSize="@dimen/medium_text_size"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
