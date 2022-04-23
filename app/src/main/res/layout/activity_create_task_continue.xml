@@ -231,7 +231,7 @@
                         android:textSize="@dimen/medium_text_size" />
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/cvCalculate"
+                        android:id="@+id/cvTimeTracker"
                         android:layout_width="170dp"
                         android:layout_height="130dp"
                         android:layout_marginTop="10dp"
@@ -296,7 +296,7 @@
                         android:textSize="@dimen/medium_text_size" />
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/cvFocus"
+                        android:id="@+id/cvPomodoro"
                         android:layout_width="170dp"
                         android:layout_height="130dp"
                         android:layout_marginTop="10dp"

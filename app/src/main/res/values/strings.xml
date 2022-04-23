@@ -60,4 +60,7 @@
     <string name="all">All</string>
     <string name="to_do">To Do</string>
     <string name="in_progress">In Progress</string>
+    <string name="_60">60%</string>
+    <string name="previous_tasks">Previous tasks</string>
+    <string name="_00_01_29_06">00:01:29:06</string>
 </resources>

@@ -1,6 +1,8 @@
 package tdtu.mobile.todo.adapter;
 
 import android.annotation.SuppressLint;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,8 +36,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, int position) {
         final Category category = categories[position];
-        holder.tvCategory.setText(categories[position].getCategory());
-        holder.tvNumTask.setText(categories[position].getNumberOfTask() + " task");
+        holder.cvCategory.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor(category.getColor())));
+        holder.tvCategory.setText(category.getCategory());
+        holder.tvNumTask.setText(category.getNumberOfTask() + " task");
         holder.cvCategory.setOnClickListener(view -> Toast.makeText(view.getContext(), category.getCategory(), Toast.LENGTH_LONG).show());
     }
 

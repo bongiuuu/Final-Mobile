@@ -80,7 +80,7 @@
                     app:strokeColor="@color/blue"
                     android:textAllCaps="false"
                     android:textSize="@dimen/medium_text_size"
-                    android:textColor="@color/dark_blue"/>
+                    android:textColor="@color/dark_blue_2"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnInProgress"
@@ -92,7 +92,7 @@
                     app:strokeColor="@color/blue"
                     android:textAllCaps="false"
                     android:textSize="@dimen/medium_text_size"
-                    android:textColor="@color/dark_blue"
+                    android:textColor="@color/dark_blue_2"
                     android:text="@string/in_progress"/>
 
             </com.google.android.flexbox.FlexboxLayout>
@@ -100,7 +100,14 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvTask"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_start_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"/>
 
         </LinearLayout>
 

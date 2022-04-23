@@ -3,6 +3,7 @@ package tdtu.mobile.todo.model;
 public class Category {
     private String category;
     private int numberOfTask;
+    private String color;
 
     public String getCategory() {
         return category;
@@ -20,8 +21,17 @@ public class Category {
         this.numberOfTask = numberOfTask;
     }
 
-    public Category(String category, int numberOfTask) {
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public Category(String category, int numberOfTask, String color) {
         this.category = category;
         this.numberOfTask = numberOfTask;
+        this.color = color;
     }
 }

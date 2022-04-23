@@ -5,6 +5,7 @@ import androidx.fragment.app.DialogFragment;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -19,15 +20,22 @@ public class CreateTaskContinueActivity extends BaseActivity {
 
     ActivityCreateTaskContinueBinding binding;
 
-
-
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void doBusiness() {
+        binding.btnBack.setOnClickListener(v -> {
+            onBackPressed();
+        });
+
         binding.ivDate.setOnClickListener(v -> {
             DialogFragment newFragment = new DatePickerFragment();
             newFragment.show(getSupportFragmentManager(), "datePicker");
             binding.tvDate.setText("ok");
+        });
+
+        binding.cvTimeTracker.setOnClickListener(v -> {
+            Intent timeTrackerIntent = new Intent(this, TimeTrackerActivity.class);
+            startActivity(timeTrackerIntent);
         });
     }
 

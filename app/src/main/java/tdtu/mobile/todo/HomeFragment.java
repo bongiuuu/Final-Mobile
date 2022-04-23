@@ -11,7 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import tdtu.mobile.todo.adapter.CategoryAdapter;
+import tdtu.mobile.todo.adapter.TaskAdapter;
 import tdtu.mobile.todo.model.Category;
+import tdtu.mobile.todo.model.Task;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -68,16 +70,28 @@ public class HomeFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
         Category[] categories = new Category[]{
-                new Category("Work", 1),
-                new Category("Activities", 3),
-                new Category("Home", 2),
-                new Category("Study", 1),
+                new Category("Work", 1, "#60acef"),
+                new Category("Activities", 3, "#ee6d3e"),
+                new Category("Home", 2, "#5e67ec"),
+                new Category("Study", 1, "#FF03DAC5"),
         };
 
         RecyclerView rvCategory = rootView.findViewById(R.id.rvCategory);
         CategoryAdapter categoryAdapter = new CategoryAdapter(categories);
         rvCategory.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         rvCategory.setAdapter(categoryAdapter);
+
+        Task[] tasks = new Task[]{
+                new Task(1, "Create a new project", 1, 100),
+                new Task(0, "Go to a shop", 3, 73),
+                new Task(0, "Create a new project", 2, 0),
+                new Task(0, "Create a new project", 1, 0),
+        };
+
+        RecyclerView rvTask = rootView.findViewById(R.id.rvTask);
+        TaskAdapter taskAdapter = new TaskAdapter(tasks);
+        rvTask.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+        rvTask.setAdapter(taskAdapter);
 
         return rootView;
     }

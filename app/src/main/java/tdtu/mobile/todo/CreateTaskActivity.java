@@ -12,6 +12,11 @@ public class CreateTaskActivity extends BaseActivity {
 
     @Override
     protected void doBusiness() {
+
+        binding.btnBack.setOnClickListener(v -> {
+            onBackPressed();
+        });
+
         binding.btnNextStep.setOnClickListener(v -> {
             Intent createTaskContIntent = new Intent(this, CreateTaskContinueActivity.class);
             startActivity(createTaskContIntent);
