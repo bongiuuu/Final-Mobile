@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 
 import tdtu.mobile.todo.Base.BaseActivity;
@@ -36,11 +38,53 @@ public class TimeTrackerActivity extends BaseActivity {
         PreviousTaskAdapter previousTaskAdapter = new PreviousTaskAdapter(previousTasks);
         rvTask.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         rvTask.setAdapter(previousTaskAdapter);
+
+        startTimer(4.8);
     }
 
     @Override
     protected View layoutId() {
         binding = ActivityTimeTrackerBinding.inflate(getLayoutInflater());
         return binding.getRoot();
+    }
+
+    private void startTimer(final double minute) {
+        CountDownTimer countDownTimer = new CountDownTimer((long) (60L * minute * 1000), 500) {
+            // 500 means, onTick function will be called at every 500 milliseconds
+
+            @SuppressLint({"DefaultLocale", "SetTextI18n"})
+            @Override
+            public void onTick(long leftTimeInMilliseconds) {
+                long seconds = leftTimeInMilliseconds / 1000;
+                long d = seconds/86400;
+                long h = (seconds - d*86400)/3600;
+                long m = (seconds - d*86400 - h*3600)/60;
+
+                int pbMax = (int) (minute*60);
+                binding.pbTime.setMax(pbMax);
+                int pbTimer = (int) (pbMax - (d*86400 + h*3600 + m*60 + seconds%60));
+                binding.pbTime.setProgress(pbTimer);
+
+                String day = String.format("%02d", d);
+                String hour = String.format("%02d", h);
+                String minute = String.format("%02d", m);
+                String second = (String.format("%02d", seconds%60));
+
+                binding.tvTime.setText(day.concat(":").
+                                concat(hour).concat(":").
+                                concat(minute).concat(":").
+                                concat(second));
+
+                // format the textview to show the easily readable format
+
+            }
+            @Override
+            public void onFinish() {
+//                if(binding.tvTime.getText().equals("00:00:00:00")){
+//                    binding.tvTime.setText("STOP");
+//                }
+            }
+        }.start();
+
     }
 }
