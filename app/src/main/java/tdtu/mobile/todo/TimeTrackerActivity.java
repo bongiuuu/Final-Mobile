@@ -1,20 +1,16 @@
 package tdtu.mobile.todo;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.annotation.SuppressLint;
-import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import tdtu.mobile.todo.Base.BaseActivity;
 import tdtu.mobile.todo.adapter.PreviousTaskAdapter;
-import tdtu.mobile.todo.adapter.TaskAdapter;
 import tdtu.mobile.todo.databinding.ActivityTimeTrackerBinding;
 import tdtu.mobile.todo.model.PreviousTask;
-import tdtu.mobile.todo.model.Task;
 
 public class TimeTrackerActivity extends BaseActivity {
 

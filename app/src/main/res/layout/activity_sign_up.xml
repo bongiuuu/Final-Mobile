@@ -169,6 +169,7 @@
                 android:backgroundTint="@color/purple_blue"
                 app:cornerRadius="10dp"
                 android:text="@string/proceed"
+                android:textStyle="bold"
                 android:textSize="@dimen/medium_text_size"/>
 
             <TextView

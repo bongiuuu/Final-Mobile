@@ -29,6 +29,7 @@
                 android:layout_marginStart="@dimen/margin_start"
                 android:layout_marginTop="@dimen/margin_start_2"
                 android:text="@string/category"
+                android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -46,15 +47,20 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <ProgressBar
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/pbPercent"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginEnd="@dimen/margin_start_2"
+                android:layout_marginEnd="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:indeterminateOnly="false"
-                android:progressDrawable="@drawable/circular_progress"
+                app:trackThickness="7dp"
+                app:trackCornerRadius="15dp"
+                app:indicatorSize="70dp"
+                app:trackColor="#C5C7C8"
+                app:indicatorColor="@color/white"
                 android:progress="63"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

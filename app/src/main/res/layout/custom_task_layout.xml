@@ -40,6 +40,7 @@
                 android:layout_marginStart="@dimen/margin_start"
                 android:layout_marginEnd="@dimen/margin_start"
                 android:text="@string/in_progress"
+                android:textStyle="bold"
                 android:textSize="25sp"
                 android:textColor="@color/dark_blue_2"/>
 
@@ -64,7 +65,7 @@
 
             <ImageView
                 android:id="@+id/ivPriority"
-                android:layout_width="30dp"
+                android:layout_width="60dp"
                 android:layout_height="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

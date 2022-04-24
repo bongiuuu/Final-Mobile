@@ -38,6 +38,7 @@
                     android:layout_marginTop="@dimen/margin_start"
                     android:text="@string/create_a_task"
                     android:gravity="center"
+                    android:textStyle="bold"
                     android:textSize="@dimen/big_text_size"
                     android:textColor="@color/dark_blue_2"/>
 
@@ -80,6 +81,7 @@
                 android:layout_marginTop="@dimen/margin_start_2"
                 android:layout_marginStart="@dimen/margin_start"
                 android:text="@string/date"
+                android:textStyle="bold"
                 android:textColor="@color/dark_blue_2"
                 android:textSize="@dimen/medium_text_size" />
 
@@ -138,6 +140,7 @@
                         android:layout_marginTop="@dimen/margin_start_2"
                         android:layout_marginStart="@dimen/margin_start"
                         android:text="@string/start_time"
+                        android:textStyle="bold"
                         android:textColor="@color/dark_blue_2"
                         android:textSize="@dimen/medium_text_size" />
 
@@ -180,6 +183,7 @@
                         android:layout_marginTop="@dimen/margin_start_2"
                         android:layout_marginStart="@dimen/margin_start"
                         android:text="@string/end_time"
+                        android:textStyle="bold"
                         android:textColor="@color/dark_blue_2"
                         android:textSize="@dimen/medium_text_size" />
 
@@ -227,6 +231,7 @@
                         android:layout_marginTop="@dimen/margin_start"
                         android:gravity="center"
                         android:text="@string/calculate_your_time"
+                        android:textStyle="bold"
                         android:textColor="@color/dark_blue_2"
                         android:textSize="@dimen/medium_text_size" />
 
@@ -260,6 +265,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/time_tracker"
+                                android:textStyle="bold"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -292,6 +298,7 @@
                         android:layout_marginTop="@dimen/margin_start"
                         android:gravity="center"
                         android:text="@string/focus_on_your_task"
+                        android:textStyle="bold"
                         android:textColor="@color/dark_blue_2"
                         android:textSize="@dimen/medium_text_size" />
 
@@ -324,6 +331,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/pomodoro"
+                                android:textStyle="bold"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -350,6 +358,7 @@
                 android:backgroundTint="@color/light_purple_blue"
                 app:cornerRadius="30dp"
                 android:text="@string/create_task"
+                android:textStyle="bold"
                 android:textAllCaps="false"
                 android:textSize="@dimen/medium_text_size"/>
 

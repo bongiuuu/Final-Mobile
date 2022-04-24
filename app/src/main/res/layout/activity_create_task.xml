@@ -39,6 +39,7 @@
                     android:layout_marginTop="@dimen/margin_start"
                     android:text="@string/create_a_task"
                     android:gravity="center"
+                    android:textStyle="bold"
                     android:textSize="@dimen/big_text_size"
                     android:textColor="@color/dark_blue_2"/>
 
@@ -100,6 +101,7 @@
                 android:layout_marginTop="@dimen/margin_start"
                 android:layout_marginStart="@dimen/margin_start"
                 android:text="@string/category"
+                android:textStyle="bold"
                 android:textSize="@dimen/medium_text_size"
                 android:textColor="@color/dark_blue_2"/>
 
@@ -187,6 +189,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="@dimen/margin_start"
                 android:text="@string/add_new_category"
+                android:textStyle="bold"
                 android:textSize="@dimen/medium_text_size"
                 android:textColor="@color/light_purple_blue"/>
 
@@ -197,6 +200,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tvAddNewCategory"
                 android:layout_marginTop="@dimen/margin_start"
                 android:layout_marginStart="@dimen/margin_start"
+                android:textStyle="bold"
                 android:text="@string/set_priority"
                 android:textSize="@dimen/medium_text_size"
                 android:textColor="@color/dark_blue_2"/>
@@ -276,6 +280,7 @@
                 android:layout_marginTop="@dimen/margin_start"
                 android:backgroundTint="@color/light_purple_blue"
                 app:cornerRadius="30dp"
+                android:textStyle="bold"
                 android:textAllCaps="false"
                 android:text="@string/next_step"
                 android:textSize="@dimen/medium_text_size"/>
