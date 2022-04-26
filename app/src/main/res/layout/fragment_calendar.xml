@@ -47,113 +47,105 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <LinearLayout
-                android:layout_marginTop="@dimen/margin_start_2"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/thumb">
 
-                <FrameLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/thumb">
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                    <LinearLayout
+                    <TextView
+                        android:id="@+id/selectDay"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_marginTop="2dp"
+                        android:layout_marginStart="2.5dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:background="@drawable/track"/>
 
-                        <TextView
-                            android:id="@+id/selectDay"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginStart="2.5dp"
-                            android:layout_marginBottom="2dp"
-                            android:layout_weight="1"
-                            android:text=""
-                            android:background="@drawable/track"/>
-
-                        <TextView
-                            android:id="@+id/selectWeek"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginBottom="2dp"
-                            android:layout_weight="1"
-                            android:text="" />
-
-                        <TextView
-                            android:id="@+id/selectMonth"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginBottom="2dp"
-                            android:layout_weight="1"
-                            android:text="" />
-
-                        <TextView
-                            android:id="@+id/selectYear"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="2.5dp"
-                            android:layout_marginBottom="2dp"
-                            android:layout_weight="1"
-                            android:text="" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <TextView
+                        android:id="@+id/selectWeek"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:text="" />
 
-                        <TextView
-                            android:id="@+id/tvDay"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:text="@string/day"
-                            android:textColor="@color/blue"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/selectMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:text="" />
 
-                        <TextView
-                            android:id="@+id/tvWeek"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:text="@string/week"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/selectYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="2.5dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:text="" />
 
-                        <TextView
-                            android:id="@+id/tvMonth"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:text="@string/month"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/tvYear"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:text="@string/year"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
-                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                </FrameLayout>
+                    <TextView
+                        android:id="@+id/tvDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/day"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvWeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/week"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tvMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/month"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tvYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/year"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+            </FrameLayout>
 
             <TextView
                 android:id="@+id/tvNumTask"

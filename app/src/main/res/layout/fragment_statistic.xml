@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".StatisticFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCreateTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_start"
+                android:text="@string/statistic"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/big_text_size"
+                android:textColor="@color/dark_blue_2"/>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_start_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/pbWork"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:indeterminateOnly="false"
+                    android:progress="67"
+                    app:indicatorColor="@color/blue"
+                    app:indicatorSize="370dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:trackColor="#d1e8fb"
+                    app:trackCornerRadius="15dp"
+                    app:trackThickness="20dp" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/pbHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:indeterminateOnly="false"
+                    android:progress="32"
+                    app:indicatorColor="@color/orange"
+                    app:indicatorSize="300dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:trackColor="#F4E2DC"
+                    app:trackCornerRadius="15dp"
+                    app:trackThickness="18dp" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/pbStudy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:indeterminateOnly="false"
+                    android:progress="78"
+                    app:indicatorColor="@color/light_purple_blue"
+                    app:indicatorSize="230dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:trackColor="#D7D9F4"
+                    app:trackCornerRadius="15dp"
+                    app:trackThickness="15dp" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/pbActivities"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:indeterminateOnly="false"
+                    android:progress="60"
+                    app:indicatorColor="@color/cyan"
+                    app:indicatorSize="160dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:trackColor="#DAF3F0"
+                    app:trackCornerRadius="15dp"
+                    app:trackThickness="15dp" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/pbOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:indeterminateOnly="false"
+                    android:progress="60"
+                    app:indicatorColor="@color/yellow"
+                    app:indicatorSize="90dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:trackColor="#F6F4E1"
+                    app:trackCornerRadius="15dp"
+                    app:trackThickness="15dp" />
+
+            </RelativeLayout>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_marginTop="@dimen/margin_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:justifyContent="space_around">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/item_circle"
+                        android:layout_height="@dimen/item_circle"
+                        android:src="@drawable/ic_circle"
+                        android:layout_gravity="center_vertical"
+                        app:tint="@color/blue"/>
+
+                    <TextView
+                        android:id="@+id/tvWorkPercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/work_55"
+                        android:textSize="@dimen/small_text_size"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/item_circle"
+                        android:layout_height="@dimen/item_circle"
+                        android:src="@drawable/ic_circle"
+                        android:layout_gravity="center_vertical"
+                        app:tint="@color/orange"/>
+
+                    <TextView
+                        android:id="@+id/tvStudyPercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/study_34"
+                        android:textSize="@dimen/small_text_size"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/item_circle"
+                        android:layout_height="@dimen/item_circle"
+                        android:src="@drawable/ic_circle"
+                        android:layout_gravity="center_vertical"
+                        app:tint="@color/light_purple_blue"/>
+
+                    <TextView
+                        android:id="@+id/tvActivitiesPercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/activities_34"
+                        android:textSize="@dimen/small_text_size"/>
+
+                </LinearLayout>
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_marginTop="@dimen/margin_start_2"
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:justifyContent="space_around">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/item_circle"
+                        android:layout_height="@dimen/item_circle"
+                        android:src="@drawable/ic_circle"
+                        android:layout_gravity="center_vertical"
+                        app:tint="@color/cyan"/>
+
+                    <TextView
+                        android:id="@+id/tvHabitsPercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/habits_34"
+                        android:textSize="@dimen/small_text_size"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/item_circle"
+                        android:layout_height="@dimen/item_circle"
+                        android:src="@drawable/ic_circle"
+                        android:layout_gravity="center_vertical"
+                        app:tint="@color/yellow"/>
+
+                    <TextView
+                        android:id="@+id/tvOtherPercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/other_34"
+                        android:textSize="@dimen/small_text_size"/>
+
+                </LinearLayout>
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <TextView
+                android:id="@+id/tvCompleteTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/complete_tasks"
+                android:layout_marginStart="@dimen/margin_start_2"
+                android:layout_marginTop="40dp"
+                android:textSize="@dimen/medium_text_size"
+                android:textStyle="bold"
+                android:textColor="@color/dark_blue_2"/>
+
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:id="@+id/pbTask"
+                style="?android:attr/progressBarStyleHorizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaskTitle"
+                android:layout_marginTop="@dimen/margin_start_2"
+                android:layout_marginStart="@dimen/margin_start_2"
+                android:layout_marginEnd="@dimen/margin_start_2"
+                android:progress="70"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                app:rcBackgroundColor="#F4F1D5"
+                app:rcMax="100"
+                app:rcProgress="90"
+                app:rcProgressColor="@color/yellow"
+                app:rcRadius="10dp" />
+
+            <TextView
+                android:id="@+id/tvNumCompleteTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2_10"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#E3B42A"/>
+
+            <TextView
+                android:id="@+id/tvOverview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/overview"
+                android:layout_marginStart="@dimen/margin_start_2"
+                android:layout_marginTop="40dp"
+                android:textSize="@dimen/medium_text_size"
+                android:textStyle="bold"
+                android:textColor="@color/dark_blue_2"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/thumb">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/selectDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginStart="2.5dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:background="@drawable/track"/>
+
+                    <TextView
+                        android:id="@+id/selectWeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/selectMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/selectYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="2.5dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/day"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tvWeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/week"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tvMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/month"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tvYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/year"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

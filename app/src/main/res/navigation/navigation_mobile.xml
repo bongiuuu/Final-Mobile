@@ -16,4 +16,10 @@
         android:name="tdtu.mobile.todo.CalendarFragment"
         android:label="fragment_calendar"
         tools:layout="@layout/fragment_calendar" />
+
+    <fragment
+        android:id="@+id/statisticFragment"
+        android:name="tdtu.mobile.todo.StatisticFragment"
+        android:label="fragment_statistic"
+        tools:layout="@layout/fragment_statistic" />
 </navigation>

@@ -42,7 +42,7 @@ public class MainActivity extends BaseActivity {
                         return true;
 
                     case R.id.miStatistic:
-                        switchHome();
+                        switchStatistic();
                         return true;
                 }
                 return false;
@@ -64,5 +64,10 @@ public class MainActivity extends BaseActivity {
     public void switchCalendar() {
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.nav_host_fragment_activity_home, new CalendarFragment()).commit();
+    }
+
+    public void switchStatistic() {
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.nav_host_fragment_activity_home, new StatisticFragment()).commit();
     }
 }

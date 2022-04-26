@@ -15,4 +15,6 @@
     <color name="light_blue">#a8d4f6</color>
     <color name="orange">#ee6d3e</color>
     <color name="very_light_blue">#D4E8F8</color>
+    <color name="cyan">#FF03DAC5</color>
+    <color name="yellow">#FFEB3B</color>
 </resources>

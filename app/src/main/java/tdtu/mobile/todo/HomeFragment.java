@@ -71,9 +71,9 @@ public class HomeFragment extends Fragment {
 
         Category[] categories = new Category[]{
                 new Category("Work", 1, "#60acef"),
-                new Category("Activities", 3, "#ee6d3e"),
-                new Category("Home", 2, "#5e67ec"),
-                new Category("Study", 1, "#FF03DAC5"),
+                new Category("Home", 3, "#ee6d3e"),
+                new Category("Study", 2, "#5e67ec"),
+                new Category("Activities", 1, "#FF03DAC5"),
         };
 
         RecyclerView rvCategory = rootView.findViewById(R.id.rvCategory);

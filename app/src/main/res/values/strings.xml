@@ -71,4 +71,12 @@
     <string name="day">Day</string>
     <string name="_3_tasks_today">3 tasks today</string>
     <string name="_7_00">7:00</string>
+    <string name="activities_34">Activities - 34%</string>
+    <string name="study_34">Study - 34%</string>
+    <string name="work_55">Work - 55%</string>
+    <string name="habits_34">Habits - 34%</string>
+    <string name="other_34">Other - 34%</string>
+    <string name="complete_tasks">Complete tasks</string>
+    <string name="overview">Overview</string>
+    <string name="_2_10">2/10</string>
 </resources>
