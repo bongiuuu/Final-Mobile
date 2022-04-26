@@ -10,4 +10,10 @@
         android:name="tdtu.mobile.todo.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="tdtu.mobile.todo.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
 </navigation>

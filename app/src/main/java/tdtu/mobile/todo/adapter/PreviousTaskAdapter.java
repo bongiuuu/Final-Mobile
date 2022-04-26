@@ -4,18 +4,14 @@ import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
-
 import tdtu.mobile.todo.R;
 import tdtu.mobile.todo.model.PreviousTask;
-import tdtu.mobile.todo.model.Task;
 
 public class PreviousTaskAdapter extends RecyclerView.Adapter<PreviousTaskAdapter.ViewHolder> {
 

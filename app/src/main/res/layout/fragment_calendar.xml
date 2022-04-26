@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".CalendarFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start_2"
+                    android:layout_marginTop="@dimen/margin_start"
+                    android:text="@string/december_18"
+                    android:textColor="@color/dark_blue_2"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivDate"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_calendar"
+                    android:layout_marginTop="@dimen/margin_start"
+                    android:layout_marginEnd="@dimen/margin_start_2"
+                    app:tint="@color/light_blue"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin_start_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/thumb">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/selectDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:background="@drawable/track"/>
+
+                        <TextView
+                            android:id="@+id/selectWeek"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/selectMonth"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/selectYear"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/day"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tvWeek"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/week"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tvMonth"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/month"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tvYear"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/year"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvNumTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_3_tasks_today"
+                android:layout_marginStart="@dimen/margin_start_2"
+                android:layout_marginTop="40dp"
+                android:textSize="@dimen/medium_text_size"
+                android:textStyle="bold"
+                android:textColor="@color/dark_blue_2"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCalendarTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_start_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
