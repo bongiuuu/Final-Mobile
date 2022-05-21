@@ -44,6 +44,10 @@ public class MainActivity extends BaseActivity {
                     case R.id.miStatistic:
                         switchStatistic();
                         return true;
+
+                    case R.id.miMusic:
+                        switchMusic();
+                        return true;
                 }
                 return false;
             }
@@ -69,5 +73,10 @@ public class MainActivity extends BaseActivity {
     public void switchStatistic() {
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.nav_host_fragment_activity_home, new StatisticFragment()).commit();
+    }
+
+    public void switchMusic() {
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.nav_host_fragment_activity_home, new MusicFragment()).commit();
     }
 }
